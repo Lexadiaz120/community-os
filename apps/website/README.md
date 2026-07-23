@@ -1,5 +1,26 @@
-# Vue 3 + TypeScript + Vite
+# @community-os/website
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Spanish-language marketing/sales landing page for Community OS itself
+(not to be confused with the per-event landing page module). Vite + Vue 3
++ Tailwind, consuming `@community-os/ui` for tokens and components.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Develop
+
+```bash
+pnpm --filter @community-os/website dev
+```
+
+## Build
+
+```bash
+pnpm --filter @community-os/website build
+```
+
+Builds with `base: "/community-os/"` (GitHub Pages project-site path) by
+default — override with `BASE_PATH=/` for a custom domain.
+
+## Deploy
+
+Pushes to `main` that touch this app (or `packages/ui`) trigger
+[`.github/workflows/deploy-website.yml`](../../.github/workflows/deploy-website.yml),
+which builds and publishes `dist/` to GitHub Pages.
