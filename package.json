@@ -1,0 +1,19 @@
+{
+  "name": "community-os",
+  "private": true,
+  "version": "0.0.1",
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "pnpm -r --parallel --if-present run dev",
+    "build": "pnpm -r --if-present run build",
+    "lint": "pnpm -r --if-present run lint",
+    "typecheck": "pnpm -r --if-present run typecheck",
+    "clean": "pnpm -r --if-present run clean"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}

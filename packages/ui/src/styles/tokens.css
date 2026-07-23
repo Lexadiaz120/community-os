@@ -1,0 +1,41 @@
+/*
+ * Design tokens — HSL channels only (no hsl() wrapper) so Tailwind's
+ * `<alpha-value>` placeholder in tailwind.config.ts can compose alpha.
+ * Values match the UI Kit Preview design (Slate/Neutral base, Indigo
+ * primary, Emerald success, Amber warning).
+ */
+:root {
+  --primary: 243 75% 59%;
+  --primary-foreground: 0 0% 100%;
+
+  --foreground: 222 47% 11%;
+  --background: 0 0% 100%;
+
+  --muted: 210 20% 96%;
+  --muted-foreground: 215 16% 47%;
+
+  --border: 214 32% 91%;
+
+  --success: 152 60% 36%;
+  --warning: 38 92% 50%;
+  --danger: 0 72% 51%;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  --shadow-soft: 0 1px 2px 0 rgb(15 23 42 / 0.04), 0 4px 12px -2px rgb(15 23 42 / 0.06);
+}
+
+[data-theme="dark"] {
+  --foreground: 210 20% 96%;
+  --background: 222 47% 8%;
+
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 16% 65%;
+
+  --border: 217 33% 20%;
+
+  --shadow-soft: 0 1px 2px 0 rgb(0 0 0 / 0.2), 0 4px 12px -2px rgb(0 0 0 / 0.3);
+}
